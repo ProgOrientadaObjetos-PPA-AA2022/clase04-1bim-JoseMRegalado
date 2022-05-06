@@ -11,6 +11,7 @@ public class Ejecutor {
         // argumentos
         FacturaTelefonica fac = new FacturaTelefonica();
         System.out.println("Objeto sin argumentos\n");
+        fac.calcularValorFactura();
         System.out.printf("Número telefónico: %s\n"
                 + "Minutos mes: %.2f\nValor minuto: %.2f\n"
                 + "Valor factura: %.2f\n", fac.obtenerNumeroTelefono(),
@@ -27,11 +28,25 @@ public class Ejecutor {
         FacturaTelefonica fac2 = new FacturaTelefonica(numero, minutos, 
                 valorMinutos);
         System.out.println("\nObjeto con argumentos\n");
+        fac2.calcularValorFactura();
         System.out.printf("Número telefónico: %s\n"
                 + "Minutos mes: %.2f\nValor minuto: %.2f\n"
                 + "Valor factura: %.2f\n", fac2.obtenerNumeroTelefono(),
                 fac2.obtenerMinutosMes(),
                 fac2.obtenerValorMinuto(),
                 fac2.obtenerValorFactura());
+        
+        FacturaTelefonica fac3 = new FacturaTelefonica("0980989876");
+        System.out.println("\nObjeto con argumentos\n");
+        
+        fac3.establecerValorMinuto(0.5);
+        fac3.establecerMinutosMes(10);
+        fac3.calcularValorFactura();
+        System.out.printf("Número telefónico: %s\n"
+                + "Minutos mes: %.2f\nValor minuto: %.2f\n"
+                + "Valor factura: %.2f\n", fac3.obtenerNumeroTelefono(),
+                fac3.obtenerMinutosMes(),
+                fac3.obtenerValorMinuto(),
+                fac3.obtenerValorFactura());
     }
 }

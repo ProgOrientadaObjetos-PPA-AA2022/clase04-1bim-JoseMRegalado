@@ -10,6 +10,7 @@ public class Ejecutor {
         // Se crea un objeto
         // haciendo referencia al constructor por defecto
         FacturaTelefonica fac = new FacturaTelefonica();
+        fac.calcularValorFactura();
         System.out.printf("Número telefónico: %s\n"
                 + "Minutos mes: %.2f\nValor minuto: %.2f\n"
                 + "Valor factura: %.2f\n", fac.obtenerNumeroTelefono(),
